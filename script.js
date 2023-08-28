@@ -45,12 +45,16 @@ function showSuggestions(searchTerm) {
     // Función para mostrar los detalles del invitado
     function displayInvitadoDetails(invitado) {
       const invitadoDiv = document.createElement('div');
-      invitadoDiv.className = 'invitado-card';
+      invitadoDiv.className = 'card text-bg-dark mb-3" style="max-width: 18rem;';
       invitadoDiv.innerHTML = `
-        <h3>${invitado.nombre}</h3>
-        <p>Acompañantes: ${invitado.acompañantes}</p>
-        <a href="home.html?invitado=${encodeURIComponent(invitado.nombre)}">Ver invitacion</a>
-      `;
+        <div class="card-header">Invitacion</div>
+        <div class="card-body">
+          <h5 class="card-title">${invitado.nombre}</h5>
+          <p class="card-text">Acompañantes: ${invitado.acompañantes}</p>
+          <a class="btn btn-primary mb-3" href="home.html?invitado=${encodeURIComponent(invitado.nombre)}">Ver invitacion</a>
+        </div>
+      
+        `;
       invitadosContainer.appendChild(invitadoDiv);
     }
 

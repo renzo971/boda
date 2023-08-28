@@ -14,7 +14,7 @@ fetch('archivo.json')
       detallesDiv.className = 'invitado-details-card';
       detallesDiv.innerHTML = `
       <p>Es un placer que puedas acompañarnos en este dia tan especial para nosotros</p>
-      <h4>Invitada</h4>
+      <h4>Invitad@</h4>
         <h3>${invitado.nombre}</h3>
         <p>Acompañantes: ${invitado.acompañantes}</p>
       `;
