@@ -1,0 +1,25 @@
+{
+    "invitados": [
+      {
+        "nombre": "Juan Pérez",
+        "acompañantes": 1
+      },
+      {
+        "nombre": "María López",
+        "acompañantes": 2
+      },
+      {
+        "nombre": "Familia García",
+        "acompañantes": 4
+      },
+      {
+        "nombre": "Roberto Martínez",
+        "acompañantes": 0
+      },
+      {
+        "nombre": "Laura Ramírez",
+        "acompañantes": 3
+      }
+    ]
+  }
+  
