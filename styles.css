@@ -1,3 +1,65 @@
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Estilos para el encabezado */
+h1 {
+  color: #333;
+  font-size: 36px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Estilos para el campo de búsqueda */
+.form-control {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+/* Estilos para la lista de sugerencias */
+.suggestions {
+  max-height: 500px;
+  overflow-y: auto;
+  padding: 10px;
+}
+
+.suggestions p {
+  margin: 0;
+  padding: 5px 0;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.suggestions p:hover {
+  background-color: #f0f0f0;
+}
+
+/* Estilos para la sección de invitados */
+#invitados {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.invitado {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 15px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.invitado h2 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 24px;
+}
 body::before {
   content: "";
   background-image: url('images/anillo.jpg');
