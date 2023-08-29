@@ -3,7 +3,7 @@ const urlParams = new URLSearchParams(window.location.search);
 const invitadoNombre = urlParams.get('invitado');
 
 // Cargar el archivo JSON de invitados
-fetch('archivo.json')
+fetch('invitados.json')
   .then(response => response.json())
   .then(data => {
     const detallesContainer = document.getElementById('detalles');
