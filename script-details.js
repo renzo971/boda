@@ -16,7 +16,7 @@ fetch('invitados.json')
       <p>Es un placer que puedas acompañarnos en este dia tan especial para nosotros</p>
       <h4>Invitad@</h4>
         <h3>${invitado.nombre}</h3>
-        <p>Acompañantes: ${invitado.acompañantes}</p>
+        <p>Pase para: ${invitado.acompañantes +1} persona</p>
       `;
       detallesContainer.appendChild(detallesDiv);
     } else {
