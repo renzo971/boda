@@ -3,11 +3,11 @@ const urlParams = new URLSearchParams(window.location.search);
 const invitadoNombre = urlParams.get('invitado');
 
 // Cargar el archivo JSON de invitados
-fetch('invitados.json')
+fetch('https://apiboda-1-production.up.railway.app/api/guests')
   .then(response => response.json())
   .then(data => {
     const detallesContainer = document.getElementById('detalles');
-    const invitado = data.invitados.find(i => i.nombre === invitadoNombre);
+    const invitado = data.find(i => i.nombre === invitadoNombre);
 
     if (invitado) {
       const detallesDiv = document.createElement('div');
@@ -16,7 +16,7 @@ fetch('invitados.json')
       <p>Es un placer que puedas acompañarnos en este dia tan especial para nosotros</p>
       <h4>Invitad@</h4>
         <h3>${invitado.nombre}</h3>
-        <p>Pase para: ${invitado.acompañantes +1} persona</p>
+        <p>Pase para: ${parseInt(invitado.acompañantes) +1} persona</p>
       `;
       detallesContainer.appendChild(detallesDiv);
     } else {
