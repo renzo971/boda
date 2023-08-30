@@ -3,10 +3,11 @@ const suggestionsContainer = document.getElementById('suggestions');
 const invitadosContainer = document.getElementById('invitados');
 
 // Cargar el archivo JSON de invitados
-fetch('invitados.json')
+fetch('https://apiboda-1-production.up.railway.app/api/guests')
   .then(response => response.json())
   .then(data => {
-    const invitados = data.invitados;
+    
+    const invitados = data;
 
     // Calcular la suma de acompañantes
     const totalAcompanantes = invitados.reduce((a, b) => a + b.acompañantes, 0);
