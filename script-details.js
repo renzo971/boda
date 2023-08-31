@@ -19,6 +19,9 @@ fetch('https://damp-wall-production.up.railway.app/api/guests')
         <p>Pase para: ${parseInt(invitado.acompañantes) +1} persona</p>
       `;
       detallesContainer.appendChild(detallesDiv);
+      const form = document.querySelector("#confir");
+      const name = form.querySelector('input[name="name"]');
+      name.value = invitado.nombre
     } else {
       const errorDiv = document.createElement('div');
       errorDiv.className = 'error-message';

@@ -2,43 +2,6 @@ const searchInput = document.getElementById("searchInput");
 const suggestionsContainer = document.getElementById("suggestions");
 const invitadosContainer = document.getElementById("invitados");
 
-//obtner contirmaciones
-function getConfirmations(done) {
-  const results = fetch(
-    "https://damp-wall-production.up.railway.app/api/confirmations"
-  )
-    .then((response) => response.json())
-    .then((data) => {
-      done(data);
-    })
-    .catch((error) =>
-      console.error("Error al cargar las confirmaciones:", error)
-    );
-}
-//imprimiendo confirmaciones
-getConfirmations((data) => {
-  data.forEach((confirmation) => {
-    const td = document.createRange().createContextualFragment(/*html*/ `
-          <article>
-               <div class="contain">
-                   <div class="contain">
-                   <div class="card">
-                   <div class="card-header">
-                   Invitado: <span>${confirmation.name}</span>
-                   </div>
-                   <div class="card-body">
-                     <h5 class="card-title"> coreo: <span>${confirmation.email}</span></h5>
-                     <p class="card-text">Dejo el mensaje: ${confirmation.message}</p>
-                   </div>
-                 </div>
-                   </div>
-               </div>
-          </article>
-     `);
-    const main = document.querySelector("#confirm");
-    main.append(td);
-  });
-});
 
 // Cargar el archivo JSON de invitados
 fetch("https://damp-wall-production.up.railway.app/api/guests")
@@ -158,10 +121,10 @@ form.addEventListener("submit", function (event) {
   const message = form.querySelector('textarea[name="message"]');
 
   const data = {
-    name: name.value,
-    email: email.value,
-    events: events.value,
-    message: message.value,
+    name: name.value.toUpperCase(),
+    email: email.value.toUpperCase(),
+    events: events.value.toUpperCase(),
+    message: message.value.toUpperCase(),
   };
   console.log(data);
 
@@ -175,6 +138,11 @@ form.addEventListener("submit", function (event) {
     .then((response) => response.json())
     .then((data) => {
       console.log(data);
+      name.value = ''
+      email.value = ''
+      events.value = ''
+      message.value = ''
+      alert(data.msg)
     })
     .catch((error) => {
       console.log(error);
