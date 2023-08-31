@@ -3,7 +3,7 @@ const urlParams = new URLSearchParams(window.location.search);
 const invitadoNombre = urlParams.get('invitado');
 
 // Cargar el archivo JSON de invitados
-fetch('https://apiboda-1-production.up.railway.app/api/guests')
+fetch('https://damp-wall-production.up.railway.app/api/guests')
   .then(response => response.json())
   .then(data => {
     const detallesContainer = document.getElementById('detalles');
