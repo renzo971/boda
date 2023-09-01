@@ -82,10 +82,10 @@ fetch("https://damp-wall-production.up.railway.app/api/guests")
       invitadoDiv.className =
         'card text-bg-light mb-3" style="max-width: 18rem;';
       invitadoDiv.innerHTML = `
-        <div class="card-header">Invitacion</div>
+        <div class="card-header text-center">Invitacion</div>
         <div class="card-body">
-          <h5 class="card-title">${invitado.nombre}</h5>
-          <p class="card-text">
+          <h5 class="card-title text-center">${invitado.nombre}</h5>
+          <p class="card-text text-center">
             Pase para: ${parseInt(invitado.acompañantes) + 1} personas<br> 
             <span style="color: red;">Los niños menores de 9 años no necesitan pase de acompañante</span>
           </p>
