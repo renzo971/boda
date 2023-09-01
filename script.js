@@ -80,7 +80,7 @@ fetch("https://damp-wall-production.up.railway.app/api/guests")
     function displayInvitadoDetails(invitado) {
       const invitadoDiv = document.createElement("div");
       invitadoDiv.className =
-        'card text-bg-dark mb-3" style="max-width: 18rem;';
+        'card text-bg-light mb-3" style="max-width: 18rem;';
       invitadoDiv.innerHTML = `
         <div class="card-header">Invitacion</div>
         <div class="card-body">
