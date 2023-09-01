@@ -6,9 +6,14 @@ body {
   background: url("../images/home-img.jpg") no-repeat center center;
   background-size: cover;
   background-position: 70%;
-  height: 115vh;
+  height: 100vh;
   min-height: 480px;
   max-height: 1080px; }
+  @media (max-width: 720px) {
+    .ww-home-page {
+      background-image: url("../images/juntos.jpg");
+    }
+  }
   .ww-home-page .ww-wedding-announcement {
     width: 100%;
     max-width: 1600px;
