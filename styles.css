@@ -18,6 +18,17 @@ a{color:inherit;text-decoration:none}
 	background:url(images/anillo.jpg) no-repeat center;
 	box-shadow:0 12px 15px 0 rgba(0,0,0,.24),0 17px 50px 0 rgba(0,0,0,.19);
 }
+@media (max-width: 720px) {
+    .login-wrap {
+		width:100%;
+		margin:auto;
+		max-width:90%;
+		min-height:620px;
+		position:relative;
+		background:url(images/anillo.jpg) no-repeat center;
+		box-shadow:0 12px 15px 0 rgba(0,0,0,.24),0 17px 50px 0 rgba(0,0,0,.19);
+	}
+    }
 .login-html{
 	width:100%;
 	height:100%;
