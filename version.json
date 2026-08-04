@@ -3,8 +3,9 @@
   "camino": 
     {
       "version": 9,
-      "releasedAt": "2026-08-01",
-      "notes": "Correcciones menores y mejoras de rendimiento"
+      "versionName": "v2.1.0",
+      "notes": "¡Hemos añadido nuevas funciones, mejoras y corrección de errores en Reba el Camino!",
+      "forceUpdate": false
     }
 
 }
